@@ -7,7 +7,7 @@ import StraightOpenBetWager from '../models/StraightOpenBetWager';
 import StraightBetWagerResult from '../models/StraightBetWagerResult';
 import User from '../models/User';
 
-import JwtStrategy from '../middleware/JwtStrategy';
+import JwtStrategy from '../middleware/jwtStrategy';
 import passport from "passport";
 
 passport.use(JwtStrategy);

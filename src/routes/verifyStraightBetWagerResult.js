@@ -6,7 +6,7 @@ import StraightOpenBetWager from '../models/StraightOpenBetWager';
 
 import fetch from 'node-fetch';
 
-import JwtStrategy from '../middleware/JwtStrategy';
+import JwtStrategy from '../middleware/jwtStrategy';
 import passport from "passport";
 passport.use(JwtStrategy);
 

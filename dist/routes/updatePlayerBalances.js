@@ -32,9 +32,9 @@ var _User = require('../models/User');
 
 var _User2 = _interopRequireDefault(_User);
 
-var _JwtStrategy = require('../middleware/JwtStrategy');
+var _jwtStrategy = require('../middleware/jwtStrategy');
 
-var _JwtStrategy2 = _interopRequireDefault(_JwtStrategy);
+var _jwtStrategy2 = _interopRequireDefault(_jwtStrategy);
 
 var _passport = require('passport');
 
@@ -45,7 +45,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var router = _express2.default.Router();
 
 
-_passport2.default.use(_JwtStrategy2.default);
+_passport2.default.use(_jwtStrategy2.default);
 
 router.get('/update-player-balances', _passport2.default.authenticate('jwt', { session: false }), function (req, res) {
 	var thisWeeklyBalance = 0;

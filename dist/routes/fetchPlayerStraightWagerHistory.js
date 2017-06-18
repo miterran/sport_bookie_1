@@ -16,9 +16,9 @@ var _StraightBetWagerResult = require('../models/StraightBetWagerResult');
 
 var _StraightBetWagerResult2 = _interopRequireDefault(_StraightBetWagerResult);
 
-var _JwtStrategy = require('../middleware/JwtStrategy');
+var _jwtStrategy = require('../middleware/jwtStrategy');
 
-var _JwtStrategy2 = _interopRequireDefault(_JwtStrategy);
+var _jwtStrategy2 = _interopRequireDefault(_jwtStrategy);
 
 var _passport = require('passport');
 
@@ -29,7 +29,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var router = _express2.default.Router();
 
 
-_passport2.default.use(_JwtStrategy2.default);
+_passport2.default.use(_jwtStrategy2.default);
 
 router.get('/fetch-player-straight-wager-history', _passport2.default.authenticate('jwt', { session: false }), function (req, res) {
 	_StraightBetWagerResult2.default.find({ playerUsername: req.user.username }, function (err, result) {

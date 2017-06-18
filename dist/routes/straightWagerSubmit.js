@@ -20,9 +20,9 @@ var _moment = require('moment');
 
 var _moment2 = _interopRequireDefault(_moment);
 
-var _JwtStrategy = require('../middleware/JwtStrategy');
+var _jwtStrategy = require('../middleware/jwtStrategy');
 
-var _JwtStrategy2 = _interopRequireDefault(_JwtStrategy);
+var _jwtStrategy2 = _interopRequireDefault(_jwtStrategy);
 
 var _passport = require('passport');
 
@@ -42,7 +42,7 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 var router = _express2.default.Router();
 
-_passport2.default.use(_JwtStrategy2.default);
+_passport2.default.use(_jwtStrategy2.default);
 
 var sportId = ['MLB', 'NBA', 'NCAAB', 'NCAAF', 'NFL', 'NHL', 'unknowSport', 'SOCCER', 'WNBA', 'TENNIS', 'BOXING', 'MMA', 'CRICKET', 'HORSE-RACING', 'KHL', 'AHL', 'SHL', 'HALL', 'LMP', 'NPB', 'KBO', 'GOLF', 'RUGBY', 'WBC'];
 

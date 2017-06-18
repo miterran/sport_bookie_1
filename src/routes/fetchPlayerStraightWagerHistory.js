@@ -3,7 +3,7 @@ const router = express.Router();
 import fetch from 'node-fetch';
 import StraightBetWagerResult from '../models/StraightBetWagerResult';
 
-import JwtStrategy from '../middleware/JwtStrategy';
+import JwtStrategy from '../middleware/jwtStrategy';
 import passport from "passport";
 
 passport.use(JwtStrategy);
