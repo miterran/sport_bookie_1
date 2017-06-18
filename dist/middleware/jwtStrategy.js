@@ -40,4 +40,4 @@ var strategy = new JwtStrategy(jwtOptions, function (jwt_payload, next) {
 });
 
 exports.default = strategy;
-//# sourceMappingURL=jwtStrategy.js.map
+//# sourceMappingURL=JwtStrategy.js.map
